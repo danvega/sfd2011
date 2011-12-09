@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Namespace</title>
+	<!-- css -->
+	<link href="../../assets/stripes.css" type="text/css" rel="stylesheet"/>	
+	<!-- scripts -->
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script type="text/javascript" src="stripes.js"></script>
+	<script type="text/javascript">		
+	$(function(){
+		$("table").stripes();
+	
+		$("#btnClear").click(function(){
+			$("table").stripes("clear");
+		});
+
+		$("#btnAdd").click(function(){
+			$("table").stripes("add");
+		});
+
+		$("#btnError").click(function(){
+			$("table").stripes("foo");
+		});
+				
+	});
+	</script>	
+</head>
+<body>
+
+	<a href="#" id="btnAdd">Add Stripes</a> | 
+	<a href="#" id="btnClear">Remove Stripes</a> | 
+	<a href="#" id="btnError">Method does not exist</a>
+	<br/><br/>
+	
+	<table>
+		<thead>
+			<tr>
+				<th></th>
+				<th>Title</th>
+				<th>Artist</th>
+				<th>Album</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>1</td>
+				<td>Head Down</td>
+				<td>Soundgarden</td>
+				<td>Superunknown</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>Crawl</td>
+				<td>Kings Of Leon</td>
+				<td>Only by the Night</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>Open Up</td>
+				<td>Korn</td>
+				<td>See You on the Other Side</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>8 Mile</td>
+				<td>Eminem</td>
+				<td>8 Mile</td>
+			</tr>
+			<tr>
+				<td>5</td>
+				<td>Love Song</td>
+				<td>Korn</td>
+				<td>See You on the Other Side</td>
+			</tr>			
+			<tr>
+				<td>6</td>
+				<td>Sweat</td>
+				<td>Tool</td>
+				<td>Opiate</td>
+			</tr>
+			<tr>
+				<td>7</td>
+				<td>E.T (Feat Kanye West)</td>
+				<td>Katy Perry</td>
+				<td>Single</td>
+			</tr>
+			<tr>
+				<td>8</td>
+				<td>Californication</td>
+				<td>Red Hot Chili Peppers</td>
+				<td>Californication</td>
+			</tr>
+			<tr>
+				<td>9</td>
+				<td>Today</td>
+				<td>Smashing Pumpkins</td>
+				<td>Slamese Dream</td>
+			</tr>
+			<tr>
+				<td>10</td>
+				<td>Down With the Sickness</td>
+				<td>Disturbed</td>
+				<td>Disturbed</td>
+			</tr>			
+		</tbody>	
+	</table>
+
+</body>
+</html>

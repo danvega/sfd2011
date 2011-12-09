@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery Selectors demo</title>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			console.log($("#btnHelloWorld").html());
+			console.log($("a").html());
+			console.log($(".link").html());
+			console.log($("[name='btnHelloWorld']").html());			
+		});
+	</script>
+</head>
+<body>
+	
+	<a id="btnHelloWorld" name="btnHelloWorld" href="hellworld.html" class="link">Hello World</a>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery event delegation - bind</title>
+	
+	<style>
+		tr {cursor:hand;cursor:pointer;}
+		.highlight {background:yellow;}
+	</style>
+	
+	<script type="application/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script type="text/javascript">
+		
+		$(function() {
+			
+			// using bind
+			$('tr').bind('click', function() {
+				$(this).toggleClass('highlight');
+			});
+			
+			// shortcut for bind
+//			$('tr').click(function(){
+//				$(this).toggleClass('highlight');
+//			});
+			
+		});
+		
+		function addNewRow(){
+			$("table tbody").append("<tr><td>-</td><td>Lorem ipsum dolor sit amet</td></tr>");
+		}
+	</script>
+	
+</head>
+<body>
+	
+	<a href="#" onclick="javascript:addNewRow();">Add New Row</a>
+	<br/><br/>
+	
+	<table cellspacing="0"> 
+		<tbody> 
+			<tr> 
+				<td>1</td> 
+				<td>Lorem ipsum dolor sit amet</td> 
+			</tr> 
+			<tr> 
+				<td>2</td> 
+				<td>Lorem ipsum dolor sit amet</td> 
+			</tr> 
+			<tr> 
+				<td>3</td> 
+				<td>Lorem ipsum dolor sit amet</td> 
+			</tr> 
+			<tr> 
+				<td>4</td> 
+				<td>Lorem ipsum dolor sit amet</td> 
+			</tr> 
+			<tr> 
+				<td>5</td> 
+				<td>Lorem ipsum dolor sit amet</td> 
+			</tr> 
+			<tr> 
+				<td>6</td> 
+				<td>Lorem ipsum dolor sit amet</td> 
+			</tr> 
+		</tbody> 
+	</table> 
+
+</body>
+</html>
+

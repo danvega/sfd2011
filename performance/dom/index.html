@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery DOM Manipulation</title>
+	<script type="application/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			
+			var languages = ["JavaScript","ColdFusion","ASP","Ruby","Groovy","Java","PHP"];
+			
+			// BAD
+			for(var i=0; i<languages.length; i++){
+				$("#mylist").append('<li>' + languages[i] + '</li>');
+			}
+			
+			// GOOD
+			var list_items = "";
+			for(var i=0; i<languages.length; i++){
+				list_items += '<li>' + languages[i] + '</li>';
+			}
+			$("#mylist").append(list_items);
+			
+		});		
+	</script>	
+</head>
+<body>
+
+	<ul id="mylist">
+	</ul>
+
+</body>
+</html>
